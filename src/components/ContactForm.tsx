@@ -17,7 +17,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    const { error } = await supabase.from("orders").insert([form]);
+    const { error } = await supabase.from("miegoat_orders").insert([form]);
     if (error) {
       setStatus("err");
     } else {
