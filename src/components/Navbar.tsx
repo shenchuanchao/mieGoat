@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
+  { href: "https://www.codeobservatory.cn/", label: "博客", external: true },
   { href: "#services", label: "服务" },
   { href: "#cases", label: "案例" },
   { href: "#pricing", label: "价格" },
@@ -22,11 +23,17 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((n) => (
-            <Link key={n.href} href={n.href} className="text-slate-300 hover:text-white transition">
-              {n.label}
-            </Link>
-          ))}
+          {navLinks.map((n) =>
+            n.external ? (
+              <a key={n.href} href={n.href} target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition">
+                {n.label}
+              </a>
+            ) : (
+              <Link key={n.href} href={n.href} className="text-slate-300 hover:text-white transition">
+                {n.label}
+              </Link>
+            )
+          )}
           <Link
             href="#contact"
             className="bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2 rounded-lg text-sm font-medium transition"
@@ -56,16 +63,17 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-slate-900 border-t border-slate-800 px-4 pb-6 pt-2 space-y-1">
-          {navLinks.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="block py-3 text-slate-300 hover:text-white text-base"
-              onClick={() => setOpen(false)}
-            >
-              {n.label}
-            </Link>
-          ))}
+          {navLinks.map((n) =>
+            n.external ? (
+              <a key={n.href} href={n.href} target="_blank" rel="noopener noreferrer" className="block py-3 text-slate-300 hover:text-white text-base" onClick={() => setOpen(false)}>
+                {n.label}
+              </a>
+            ) : (
+              <Link key={n.href} href={n.href} className="block py-3 text-slate-300 hover:text-white text-base" onClick={() => setOpen(false)}>
+                {n.label}
+              </Link>
+            )
+          )}
           <Link
             href="#contact"
             className="block text-center mt-3 bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-3 rounded-lg font-medium transition"
