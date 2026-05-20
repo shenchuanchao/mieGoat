@@ -17,7 +17,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link href="/" className="text-xl font-bold text-white">
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white">
+          <img src="/logo.png" alt="MieGoat" className="w-8 h-8 rounded-lg" />
           Mie<span className="text-indigo-400">Goat</span>
         </Link>
 

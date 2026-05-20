@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 圆角背景 -->
+  <rect width="200" height="200" rx="44" fill="none"/>
+  
+  <!-- 山羊头 -->
+  <g transform="translate(100, 95)">
+    <!-- 脸 -->
+    <ellipse cx="0" cy="8" rx="38" ry="48" fill="#fef3c7"/>
+    
+    <!-- 角 - 向后弯曲 -->
+    <path d="M-28 -38 C-40 -55 -35 -72 -18 -75" stroke="#fbbf24" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M28 -38 C40 -55 35 -72 18 -75" stroke="#fbbf24" stroke-width="8" stroke-linecap="round" fill="none"/>
+    
+    <!-- 耳朵 -->
+    <ellipse cx="-40" cy="-12" rx="10" ry="20" fill="#fef3c7" transform="rotate(-20 -40 -12)"/>
+    <ellipse cx="40" cy="-12" rx="10" ry="20" fill="#fef3c7" transform="rotate(20 40 -12)"/>
+    <ellipse cx="-40" cy="-12" rx="5" ry="10" fill="#fda4af" transform="rotate(-20 -40 -12)"/>
+    <ellipse cx="40" cy="-12" rx="5" ry="10" fill="#fda4af" transform="rotate(20 40 -12)"/>
+    
+    <!-- 眼睛 -->
+    <ellipse cx="-15" cy="-2" rx="10" ry="12" fill="#1e293b"/>
+    <ellipse cx="15" cy="-2" rx="10" ry="12" fill="#1e293b"/>
+    <circle cx="-13" cy="-5" r="4" fill="white"/>
+    <circle cx="17" cy="-5" r="4" fill="white"/>
+    
+    <!-- 鼻子区域 -->
+    <ellipse cx="0" cy="28" rx="20" ry="15" fill="#fef3c7"/>
+    
+    <!-- 鼻孔 - 简单的两个点 -->
+    <ellipse cx="-7" cy="26" rx="4" ry="5" fill="#9ca3af"/>
+    <ellipse cx="7" cy="26" rx="4" ry="5" fill="#9ca3af"/>
+    
+    <!-- 嘴巴 - 微笑 -->
+    <path d="M-8 38 Q0 44 8 38" stroke="#374151" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- 山羊胡 - 五缕 -->
+    <path d="M-10 42 Q-18 58 -22 72" stroke="#fef3c7" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M-5 42 Q-10 62 -12 78" stroke="#fef3c7" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M0 42 Q0 65 0 80" stroke="#fef3c7" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M5 42 Q10 62 12 78" stroke="#fef3c7" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M10 42 Q18 58 22 72" stroke="#fef3c7" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
